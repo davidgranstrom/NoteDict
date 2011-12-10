@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title></title>
+<meta name="Generator" content="Cocoa HTML Writer">
+<meta name="CocoaVersion" content="1038.36">
+<style type="text/css">
+p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.0px Monaco; min-height: 12.0px}
+p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Helvetica}
+p.p5 {margin: 0.0px 0.0px 0.0px 57.0px; text-indent: -57.0px; font: 9.0px Monaco; min-height: 12.0px}
+p.p6 {margin: 0.0px 0.0px 0.0px 57.0px; text-indent: -57.0px; font: 12.0px Helvetica}
+p.p7 {margin: 0.0px 0.0px 0.0px 57.0px; text-indent: -57.0px; font: 12.0px Helvetica; min-height: 14.0px}
+p.p8 {margin: 0.0px 0.0px 0.0px 85.0px; text-indent: -85.0px; font: 12.0px Helvetica}
+p.p9 {margin: 0.0px 0.0px 0.0px 57.0px; text-indent: -57.0px; font: 9.0px Monaco; color: #d40000}
+p.p10 {margin: 0.0px 0.0px 0.0px 57.0px; text-indent: -57.0px; font: 9.0px Monaco; color: #1200c4}
+p.p11 {margin: 0.0px 0.0px 0.0px 57.0px; text-indent: -57.0px; font: 9.0px Monaco; color: #e20505}
+p.p12 {margin: 0.0px 0.0px 0.0px 57.0px; text-indent: -57.0px; font: 9.0px Monaco}
+p.p13 {margin: 0.0px 0.0px 0.0px 57.0px; text-indent: -57.0px; font: 14.0px Helvetica}
+p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.0px Monaco}
+p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.0px Monaco; color: #00731b}
+p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.0px Monaco; color: #00731b; min-height: 12.0px}
+p.p17 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.0px Monaco; color: #e20505; min-height: 12.0px}
+p.p18 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.0px Monaco; color: #e20505}
+p.p19 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.0px Monaco; color: #008320}
+p.p20 {margin: 0.0px 0.0px 0.0px 0.0px; font: 9.0px Monaco; color: #002bc5}
+span.s1 {font: 18.0px Helvetica}
+span.s2 {color: #1200c4}
+span.s3 {color: #008320}
+span.s4 {color: #000000}
+span.s5 {color: #d40000}
+span.s6 {text-decoration: underline}
+span.s7 {color: #00731b}
+span.s8 {color: #002bc5}
+span.s9 {color: #e20505}
+span.Apple-tab-span {white-space:pre}
+</style>
+</head>
+<body>
+<p class="p1"><span class="s1"><b>NoteDict<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></b></span><b>a dictionary for pitch notations</b><span class="s1"><b><span class="Apple-tab-span">	</span></b></span></p>
+<p class="p2"><br></p>
+<p class="p1"><b>Inherits from: Object</b></p>
+<p class="p3"><br></p>
+<p class="p1">Allows easy access to various notations when working with pitches.</p>
+<p class="p2"><br></p>
+<p class="p1"><b>See also:</b> <a href="../../../../../../../../Applications/SuperCollider/Help/Core/Object.html"><span class="s2">Object</span></a><span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p4"><b>Creation / Class Methods</b></p>
+<p class="p5"><br></p>
+<p class="p6"><b><span class="Apple-tab-span">	</span>*new (style, output)</b></p>
+<p class="p7"><b><span class="Apple-tab-span">	</span></b></p>
+<p class="p6"><b><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></b>Creates a new <a href="../../../../../../../../Applications/SuperCollider/Help/Collections/IdentityDictionary.html"><span class="s2">IdentityDictionary</span></a> containing note names.</p>
+<p class="p8"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><b>style<span class="Apple-tab-span">	</span></b>available styles are: <span class="s3">\traditional</span>, <span class="s3">\helmholtz</span> and <span class="s3">\MIDI</span> (default: <span class="s3">\traditional</span>)</p>
+<p class="p8"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><b>output<span class="Apple-tab-span">	</span></b>output in midi note numbers or Herz (default: <span class="s3">\MIDI</span>)</p>
+<p class="p7"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p9"><span class="s4"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>// create a new dictionary</p>
+<p class="p10"><span class="s4"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>n= </span>NoteDict()<span class="s4">;</span></p>
+<p class="p5"><br></p>
+<p class="p9"><span class="s4"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>n[</span><span class="s3">'c1'</span><span class="s4">]; </span>// get one note</p>
+<p class="p11"><span class="s5"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span><span class="s4">n[[ </span><span class="s3">'c'</span><span class="s4">, </span><span class="s3">'e'</span><span class="s4">, </span><span class="s3">'g'</span><span class="s4"> ]]; </span>// get an array of notes</p>
+<p class="p5"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p6"><b><span class="Apple-tab-span">	</span>*numberToNote (num, style)</b></p>
+<p class="p7"><b><span class="Apple-tab-span">	</span></b></p>
+<p class="p6"><b><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></b>Not intended to be used directly.<span class="Apple-converted-space"> </span></p>
+<p class="p6"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>Extends SimpleNumber instead, see below.</p>
+<p class="p8"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><b>num<span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></b>a MIDI note number</p>
+<p class="p8"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><b>style<span class="Apple-tab-span">	</span></b>in which style to display the output</p>
+<p class="p7"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p9"><span class="s4"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>// ask MIDI notes for their pitch name</p>
+<p class="p12"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>60.asNote;</p>
+<p class="p12"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>60.asNote(<span class="s3">\MIDI</span>);</p>
+<p class="p11"><span class="s4"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>// works on arrays too</p>
+<p class="p12"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>[ 60, 64, 67 ].asNote;</p>
+<p class="p5"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p12"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s6">NOTE:</span> when using style <span class="s3">\helmholtz</span> the octave symbol will<span class="Apple-converted-space"> </span></p>
+<p class="p12"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>not be displayed correctly in the post window.</p>
+<p class="p5"><br></p>
+<p class="p5"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p13"><b>Examples</b></p>
+<p class="p2"><br></p>
+<p class="p1">'middle c' in all notation styles</p>
+<p class="p2"><br></p>
+<p class="p14"><span class="s7"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>'c1' </span>-&gt; \traditional (german)</p>
+<p class="p14"><span class="s7"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>'c´' </span>-&gt;<span class="s7"> </span>\helmholtz</p>
+<p class="p15"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>'C4' <span class="s4">-&gt;</span> <span class="s4">\MIDI</span></p>
+<p class="p16"><span class="Apple-tab-span">	</span></p>
+<p class="p14">Both sharp <span class="s3">'#'</span> and flat <span class="s3">'b'</span> notation is supported.</p>
+<p class="p14">The ranges are the following:</p>
+<p class="p3"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p14"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s3">\traditional</span> <span class="Apple-tab-span">	</span>=<span class="Apple-converted-space">  </span>C3<span class="Apple-tab-span">	</span>-&gt;<span class="Apple-converted-space">  </span>g6<span class="Apple-tab-span">	</span></p>
+<p class="p14"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s3">\helmholtz</span><span class="Apple-tab-span">	</span>=<span class="Apple-converted-space">  </span>C,,,<span class="Apple-tab-span">	</span>-&gt;<span class="Apple-converted-space">  </span>g´´´´´´</p>
+<p class="p14"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s3">\MIDI</span><span class="Apple-converted-space">  <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>=<span class="Apple-converted-space">  </span>C-1<span class="Apple-tab-span">	</span>-&gt;<span class="Apple-converted-space">  </span>G9</p>
+<p class="p16"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p17"><br></p>
+<p class="p18">//-- sound examples</p>
+<p class="p14">s.boot;</p>
+<p class="p3"><span class="Apple-tab-span">	</span></p>
+<p class="p14">x= play{<span class="s8">|freq|</span> <span class="s8">SinOsc</span>.ar(freq) * 0.15 };</p>
+<p class="p3"><br></p>
+<p class="p18">// helmholtz notation with frequency output</p>
+<p class="p19"><span class="s4">n= </span><span class="s8">NoteDict</span><span class="s4">(</span>\helmholtz<span class="s4">, </span>\freq<span class="s4">);</span></p>
+<p class="p3"><br></p>
+<p class="p14">x.set(<span class="s3">\freq</span>, n[<span class="s3">'gb´'</span>].postln);<span class="Apple-converted-space">  </span><span class="s9">// one-lined g flat</span></p>
+<p class="p14">x.set(<span class="s3">\freq</span>, n[<span class="s3">'c#´´'</span>].postln); <span class="s9">// two-lined c sharp</span></p>
+<p class="p3"><br></p>
+<p class="p14">x.free;</p>
+<p class="p3"><br></p>
+<p class="p14">(</p>
+<p class="p18">// sequencing with patterns</p>
+<p class="p18">// dictionary returns midi notes</p>
+<p class="p14">s.waitForBoot{<span class="Apple-converted-space"> </span></p>
+<p class="p17"><br></p>
+<p class="p18"><span class="Apple-tab-span">	</span>// create a new dictionary with default values</p>
+<p class="p20"><span class="s4"><span class="Apple-tab-span">	</span>n= </span>NoteDict<span class="s4">();<span class="Apple-converted-space"> </span></span></p>
+<p class="p17"><span class="Apple-tab-span">	</span></p>
+<p class="p18"><span class="Apple-tab-span">	</span>// make some chords..</p>
+<p class="p14"><span class="Apple-tab-span">	</span>~c=<span class="Apple-converted-space">  </span>n[[ <span class="s3">'c'</span>, <span class="s3">'e'</span>, <span class="s3">'g'</span> ]];<span class="Apple-converted-space"> </span></p>
+<p class="p14"><span class="Apple-tab-span">	</span>~am= n[[ <span class="s3">'a'</span>, <span class="s3">'c'</span>, <span class="s3">'e'</span> ]];<span class="Apple-converted-space"> </span></p>
+<p class="p14"><span class="s9"><span class="Apple-tab-span">	</span></span>~em= n[[ <span class="s3">'e'</span>, <span class="s3">'g'</span>, <span class="s3">'b'</span> ]];</p>
+<p class="p3"><br></p>
+<p class="p20"><span class="s4"><span class="Apple-tab-span">	</span></span>SynthDef<span class="s4">(</span><span class="s3">\arp</span><span class="s4">, {</span>|out=0, freq, cfreq|</p>
+<p class="p14"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s8">var</span> src, env;</p>
+<p class="p14"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>src= <span class="s8">RLPF</span>.ar(<span class="s8">Saw</span>.ar(freq*[0.99,1,1.01]).mean, cfreq*[1,0.98], <span class="s8">Rand</span>(0.25, 1));</p>
+<p class="p14"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>env= <span class="s8">EnvGen</span>.ar(<span class="s8">Env</span>.perc, levelScale:0.25, doneAction:2);</p>
+<p class="p14"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s8">Out</span>.ar(out, src*env);</p>
+<p class="p14"><span class="Apple-tab-span">	</span>}).add;</p>
+<p class="p3"><span class="Apple-converted-space">    </span></p>
+<p class="p14"><span class="Apple-tab-span">	</span>s.sync;</p>
+<p class="p3"><span class="Apple-converted-space">    </span></p>
+<p class="p14"><span class="Apple-tab-span">	</span>p= <span class="s8">Pbind</span>(</p>
+<p class="p19"><span class="s4"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>\instrument<span class="s4">, </span>\arp<span class="s4">,</span></p>
+<p class="p19"><span class="s4"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>\midinote<span class="s4">, </span><span class="s8">Pseq</span><span class="s4">([<span class="Apple-converted-space"> </span></span></p>
+<p class="p14"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s8">Pseq</span>(~em, 8) + <span class="s8">Pn</span>(<span class="s8">Pshuf</span>([ 0, 12, 24 ], 3)),<span class="Apple-converted-space"> </span></p>
+<p class="p14"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s8">Pseq</span>(~c, 12) + <span class="s8">Pn</span>(<span class="s8">Pshuf</span>([ 0, 12, 24 ], 3)),</p>
+<p class="p14"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s8">Pseq</span>(~am, 4) + <span class="s8">Pn</span>(<span class="s8">Pshuf</span>([ 0, 12, 24 ], 3))<span class="Apple-converted-space"> </span></p>
+<p class="p14"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>], <span class="s8">inf</span>),</p>
+<p class="p14"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s3">\cfreq</span>, <span class="s8">Pseg</span>(<span class="s8">Pseq</span>(n[[ <span class="s3">'c1'</span>, <span class="s3">'c5' </span>]].midicps, <span class="s8">inf</span>), <span class="s8">Pseq</span>([ 16, 16 ], <span class="s8">inf</span>), <span class="s3">\sine</span>),</p>
+<p class="p14"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="s3">\dur</span>, 1/8</p>
+<p class="p14"><span class="Apple-tab-span">	</span>).play;</p>
+<p class="p14">}</p>
+<p class="p14">)</p>
+<p class="p14">p.stop;</p>
+</body>
+</html>
