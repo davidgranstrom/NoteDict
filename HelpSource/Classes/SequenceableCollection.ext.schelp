@@ -1,0 +1,8 @@
+INSTANCEMETHODS::
+
+subsection:: Extension by NoteDict
+
+method:: asNote
+argument:: style
+style to display the output 
+returns:: a collection of note names

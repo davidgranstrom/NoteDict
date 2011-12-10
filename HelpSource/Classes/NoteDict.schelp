@@ -1,0 +1,122 @@
+class::NoteDict
+summary::a dictionary for pitch notations
+categories::Collections>Unordered
+related::Classes/IdentityDictionary
+
+description::
+Allows easy access to various notations when working with pitches.
+
+classmethods::
+private:: create, initClass, instances
+
+method:: new 
+
+argument:: style
+available styles are: \traditional, \helmholtz and \MIDI (default: \traditional)
+
+argument:: output
+output in midi note numbers or Herz (default: \MIDI)
+
+discussion::
+code::
+// create a new dictionary
+n= NoteDict();
+
+n['c1']; // get one note
+n[[ 'c', 'e', 'g' ]]; // get an array of notes
+::
+
+method:: numberToNote
+Not intended to be used directly.
+Extends SimpleNumber instead, see below.
+
+argument:: num
+a MIDI note number
+
+argument:: style
+in which style to display the output
+
+discussion::
+code::
+// ask MIDI notes for their pitch name
+60.asNote;
+60.asNote(\MIDI);
+// works on arrays too
+[ 60, 64, 67 ].asNote;
+::
+note:: when using style \helmholtz the the octave symbol will not be displayed correctly in the post window.
+
+instancemethods::
+private:: output, style, init, notes, makeDict, noteDict 
+
+method:: at
+get one or a collection of notes from the dictionary
+
+examples::
+emphasis::middle c:: in all notation styles
+
+table::
+## strong::\traditional:: (german) || c1 
+## strong::\helmholtz:: || c´
+## strong::\MIDI:: || C4
+::
+
+Both emphasis::sharp:: '#' and emphasis::flat:: 'b' notation is supported.
+
+The ranges are the following:
+        
+table::
+## strong::\traditional:: || C3 || g6
+## strong::\helmholtz:: || C,,, || g´´´´´´
+## strong::\MIDI:: || C-1 || G9
+::
+
+code::
+//-- sound examples
+s.boot;
+x= play{|freq| SinOsc.ar(freq) * 0.15 };
+
+// midi note names with frequency output
+n= NoteDict(\MIDI, \freq);
+
+x.set(\freq, n['A4']);   
+x.set(\freq, n['E5']);
+
+x.free; n= nil;
+
+(
+// sequencing with patterns
+// dictionary returns midi notes
+s.waitForBoot{ 
+
+    // create a new dictionary with default values
+    n= NoteDict(); 
+
+    // make some chords..
+    ~c=  n[[ 'c', 'e', 'g' ]]; 
+    ~am= n[[ 'a', 'c', 'e' ]]; 
+    ~em= n[[ 'e', 'g', 'b' ]];
+
+    SynthDef(\arp, {|out=0, freq, cfreq|
+        var src, env;
+        src= RLPF.ar(Saw.ar(freq*[0.99,1,1.01]).mean, cfreq*[1,0.98], Rand(0.25, 1));
+        env= EnvGen.ar(Env.perc, levelScale:0.25, doneAction:2);
+        Out.ar(out, src*env);
+    }).add;
+
+    s.sync;
+
+    p= Pbind(
+        \instrument, \arp,
+        \midinote, Pseq([ 
+                        Pseq(~em, 8) + Pn(Pshuf([ 0, 12, 24 ], 3)), 
+                        Pseq(~c, 12) + Pn(Pshuf([ 0, 12, 24 ], 3)),
+                        Pseq(~am, 4) + Pn(Pshuf([ 0, 12, 24 ], 3)) 
+                   ], inf),
+        \cfreq, Pseg(Pseq(n[[ 'c1', 'c5' ]].midicps, inf), Pseq([ 16, 16 ], inf), \sine),
+        \dur, 1/8
+    ).play;
+}
+)
+p.stop;
+::
