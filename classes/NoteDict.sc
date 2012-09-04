@@ -3,7 +3,7 @@
 
 NoteDict {
 
-    classvar <>instances;
+    classvar instances;
     classvar small, big, numbered;
     classvar h_small, h_big;
 
@@ -16,18 +16,21 @@ NoteDict {
     }
 
     *create{|style|
-
-        instances= instances ? ();
-
-        if(instances[style].isNil, {
+        instances = instances ? ();
+        instances[style] ?? {
             instances.put(style, NoteDict(style));
-        });
-
-        ^instances[style]
+        };
+        ^instances[style];
     }
 
-    *numberToNote{|num, style=\traditional|
-        ^NoteDict.create(style).notes.findKeyForValue(num);
+    *numberToNote{|num, style|
+        ^NoteDict.create(style)
+        .notes.findKeyForValue(num);
+    }
+
+    *symbolToNote{|symbol, style|
+        ^NoteDict.create(style)
+        .notes[symbol];
     }
 
     init{
